@@ -9,3 +9,9 @@
 
 http://php.net/manual/fr/function.mt-rand.php
 */
+
+if(!isset($_POST['submit'], $_POST['min'], $_POST['max']) && is_integer($_POST['min'], $_POST['max'])){
+    echo "error";
+}
+
+echo rand($_POST['min'], $_POST['max']);
